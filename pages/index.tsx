@@ -16,10 +16,13 @@ export default function Home() {
 
       <Group //@ts-ignore
        direction ="column" mt = "-20px">
-        <Group style={{backgroundColor: '#0c0c0c', height: '80vh', width:'400px', marginTop:'25px', borderRadius: "10px"}} mx="auto" //@ts-ignore
+        <Group style={{backgroundColor: '#0c0c0c', height: '100vh', width:'400px', 
+        // marginTop:'25px', borderRadius: "10px"
+      }} mx="auto" //@ts-ignore
         direction = "column" >
           <Group position='apart' style={{ width: "100%"}}>
-            <ActionIcon color="gray" variant="transparent" size="lg" style={{marginTop: "0px", marginLeft: "20px"}}><IconSettings></IconSettings></ActionIcon>
+            <ActionIcon color="gray" variant="transparent" size="lg" style={{marginTop: "-600px", marginLeft: "15px"}}><IconSettings></IconSettings></ActionIcon>
+            <ActionIcon color="gray" variant="transparent" size="lg" style={{marginTop: "-600px", marginRight: "20px"}}><IconPlaylistAdd></IconPlaylistAdd></ActionIcon>
           </Group>
         </Group>
       </Group>
