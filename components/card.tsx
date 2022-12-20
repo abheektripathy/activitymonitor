@@ -63,7 +63,7 @@ const mockdata = [
   { label: "Electric", icon: IconGasStation },
 ];
 
-export function FeaturesCard() {
+export function FeaturesCard({...props}) {
   const { classes } = useStyles();
   const features = mockdata.map((feature) => (
     <Center key={feature.label}>
@@ -75,14 +75,14 @@ export function FeaturesCard() {
   return (
     <Card withBorder radius="md" className={classes.card}>
       <Card.Section className={classes.imageSection}>
-        <Image src="https://www.freepnglogos.com/uploads/nirvana-logo/nirvana-logo-band-png-logos-20.jpg" alt="Tesla Model S" />
+        <Image src={props.image} alt="no image"/>
       </Card.Section>
 
       <Group position="apart" mt="md">
         <div>
-          <Text weight={500}>Tesla Model S</Text>
-          <Text size="xs" color="dimmed">
-            Free recharge at any station
+          <Text weight={500}>{props.name}</Text>
+          <Text size="md" color="dimmed">
+            {props.date}
           </Text>
         </div>
         
@@ -95,7 +95,7 @@ export function FeaturesCard() {
         <Group spacing={30} position= "apart">
           <div>
             <Text size="xl" weight={700} sx={{ lineHeight: 1 }}>
-              $168.00
+             {props.rocket}
             </Text>
             <Text
               size="sm"
@@ -104,12 +104,12 @@ export function FeaturesCard() {
               sx={{ lineHeight: 1 }}
               mt={3}
             >
-              per day
+              Rocket
             </Text>
           </div>
 
           <Button radius="xl" >
-            Rent now
+            <a href={props.link}>Watch</a>
           </Button>
         </Group>
       </Card.Section>
