@@ -25,7 +25,8 @@ export default function Home() {
             <ActionIcon color="gray" variant="transparent" size="lg" style={{marginTop: "-300px", marginRight: "20px"}}><IconPlaylistAdd></IconPlaylistAdd></ActionIcon>
             
           </Group>
-          <Group spacing="none" mt = 'sm' position='center'  mx = 'auto' direction= 'column' height = '176px' style={{marginTop: "-800px"}} >
+          <Group //@ts-ignore
+          spacing="none" mt = 'sm' position='center'  mx = 'auto' direction= 'column' height = '176px' style={{marginTop: "-800px"}} >
             <Title order={1} style={{fontWeight: 'bolder', fontSize: '4rem'}}>25:00</Title>
             
           </Group>
