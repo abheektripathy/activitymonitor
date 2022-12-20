@@ -40,9 +40,13 @@ export default function Home({
       
 
       <Flex
-        direction={{ base: "column", sm: "row" }}
-        gap={{ base: "lg", sm: "lg" }}
-        justify={{ sm: "center" }}
+        mih={30}
+        bg="rgba(0, 0, 0, .3)"
+        gap="xl"
+        justify="center"
+        align="flex-end"
+        direction="row"
+        wrap="wrap"
       >
         {launches.map(
           (launch: {
@@ -79,7 +83,7 @@ export async function getStaticProps() {
   const { data } = await Client.query({
     query: gql`
       query getLaunches {
-        launchesPast(limit: 4, offset: 30) {
+        launchesPast(limit: 4, offset: 40) {
           mission_name
           launch_date_local
           launch_date_utc

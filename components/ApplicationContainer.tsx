@@ -19,13 +19,13 @@ export const ApplicationContainer = ({ //@ts-ignore
         <Group position="apart" spacing='xl'>
             <Text size='sm'>
                 <span style={{fontWeight: "bolder"}}>
-                  🚀 List Time 
-                </span> .25 hrs 
+                  🚀 
+                </span>
             </Text>
             <Text size='sm'>
                 <span style={{fontWeight: "bolder"}}>
-                   🎉 End Time 
-                </span> .25 hrs 
+                   🎉
+                </span> 
             </Text>             
         </Group>
 
