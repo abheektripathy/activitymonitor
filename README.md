@@ -1,1 +1,1 @@
-well, how about i pick up some graphql eh?
+Shows you the latest SpaceX launches and its details, using the SpaceX graphql api.
