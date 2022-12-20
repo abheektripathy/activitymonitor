@@ -37,7 +37,7 @@ export default function Home({
   return (
     <>
       <br></br>
-      <br></br>
+      
 
       <Flex
         direction={{ base: "column", sm: "row" }}
@@ -49,13 +49,13 @@ export default function Home({
             rocket: any;
             mission_name: any;
             links: { mission_patch_small: ImageData; video_link: any };
-            launch_date_local: any;
+            launch_date_utc: any;
           }) => {
             return (
               <FeaturesCard
                 name={launch.mission_name}
                 image={launch.links.mission_patch_small}
-                date={launch.launch_date_local}
+                date={launch.launch_date_utc}
                 link={launch.links.video_link}
                 rocket={launch.rocket.rocket_name}
               ></FeaturesCard>
@@ -79,9 +79,10 @@ export async function getStaticProps() {
   const { data } = await Client.query({
     query: gql`
       query getLaunches {
-        launchesPast(limit: 3,  offset: 40) {
+        launchesPast(limit: 4, offset: 30) {
           mission_name
           launch_date_local
+          launch_date_utc
           launch_site {
             site_name_long
           }
