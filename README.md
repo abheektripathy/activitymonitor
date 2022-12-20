@@ -1,1 +1,1 @@
-who said we can't innovate activity managers?
+Shows you the latest SpaceX launches and its details, using the SpaceX graphql api.
