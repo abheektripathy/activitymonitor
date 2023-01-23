@@ -38,7 +38,7 @@ export const ApplicationContainer = ({ //@ts-ignore
                 fontWeight: "bolder",
                 fontSize: "1.2rem",
             }
-        }>Alpaca</span>    Activity.
+        }>Activity</span>    Monitor.
             </Text>
         
         <span style={{
