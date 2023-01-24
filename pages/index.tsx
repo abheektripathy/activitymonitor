@@ -5,40 +5,28 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-import {
-  Group,
-  ActionIcon,
-  Box,
-  Text,
-  Title,
-  UnstyledButton,
-  useMantineTheme,
-  Center,
-  Flex,
-} from "@mantine/core";
-import {
-  IconPlayerPlay,
-  IconSettings,
-  IconPlaylistAdd,
-  IconPlus,
-} from "@tabler/icons";
-import { FeaturesCard } from "../components/card";
+import { useMantineTheme } from "@mantine/core";
+
 import { Key } from "react";
+import { GetServerSideProps } from "next";
+import { Prisma, prisma } from "@prisma/client";
 const inter = Inter({ subsets: ["latin"] });
+interface props {
+  projects: Prisma.ProjectsSelect[]
+}
 
 //see here in the main function we're calling the data as props, using launches
 
-export default function Home({
-}) {
-
+export default function Home({}) {
   const theme = useMantineTheme();
-  return (
-    <>
-     
+  return <></>;
+}
 
 
-    </>
-  );
+export const getServerSideProps:  GetServerSideProps= async() => {
+  const projects= await prisma.projects.findMany();
+
+  
 }
 
 // export async function getStaticProps() {
